@@ -1,6 +1,10 @@
 SCRIPT_DIR=$HOME/dotfiles
 
+# if using MacOS, load HomeBrew
+if [ "$(uname)" == 'Darwin' ]; then
 source $SCRIPT_DIR/zsh/homebrew.zsh
+fi
+
 source $SCRIPT_DIR/zsh/zplug.zsh
 source $SCRIPT_DOR/zsh/p10k.zsh
 source $SCRIPT_DOR/zsh/envs.zsh
