@@ -5,7 +5,7 @@ if [ "$(uname)" == 'Darwin' ]; then
 # Homebrewをインストール
   sh ./$SCRIPT_DIR/homebrew/brew.sh
 elif [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]; then
-  
+  echo 'en'
 fi
 
 # 配置したい設定ファイル
