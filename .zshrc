@@ -12,6 +12,7 @@ source $SCRIPT_DIR/zsh/zplug.zsh
 source $SCRIPT_DIR/zsh/p10k.zsh
 source $SCRIPT_DIR/zsh/envs.zsh
 source $SCRIPT_DIR/zsh/pipUpdate.zsh
+source $SCRIPT_DIR/zsh/cuda.zsh
 
 if [ 'uname' = "Darwin" ]; then
   source $SCRIPT_DIR/zsh/aliasForMacOS.zsh
