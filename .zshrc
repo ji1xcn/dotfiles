@@ -3,18 +3,21 @@
 SCRIPT_DIR=${HOME}/dotfiles
 
 # if using MacOS, load HomeBrew
-# if [ "$(uname)" == 'Darwin' ]; then
-#  source $SCRIPT_DIR/zsh/homebrew.zsh
-  source ~/dotfiles/zsh/homebrew.zsh
-# fi
+if [ "$(uname)" = 'Darwin' ]; then
+  source $SCRIPT_DIR/zsh/homebrew.zsh
+#  source ~/dotfiles/zsh/homebrew.zsh
+fi
 
 source $SCRIPT_DIR/zsh/zplug.zsh
 source $SCRIPT_DIR/zsh/p10k.zsh
 source $SCRIPT_DIR/zsh/envs.zsh
 source $SCRIPT_DIR/zsh/pipUpdate.zsh
-source $SCRIPT_DIR/zsh/cuda.zsh
+if [ "$(uname)" = "Linux" ] : then
+  source $SCRIPT_DIR/zsh/cuda.zsh
+fi
 
-if [ 'uname' = "Darwin" ]; then
+# Set Alias
+if [ "$(uname)" = "Darwin" ]; then
   source $SCRIPT_DIR/zsh/aliasForMacOS.zsh
 elif [ '$(expr substr $(uname -s) 1 5)' = "Linux" ]; then
   
